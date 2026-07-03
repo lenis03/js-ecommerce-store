@@ -3,7 +3,7 @@ import {
   removeFromCart,
   getCartQuantity,
   updateCartQuantity,
-  updateDeliveryOtion,
+  updateDeliveryOption,
 } from "../../data/cart.js";
 import { products, getProduct } from "../../data/products.js";
 import formatCurrency from "../utils/money.js";
@@ -156,7 +156,7 @@ export function renderOrderSummary() {
   document.querySelectorAll(".js-delivery-option").forEach((element) => {
     element.addEventListener("click", () => {
       const { productId, deliveryOptionId } = element.dataset;
-      updateDeliveryOtion(productId, deliveryOptionId);
+      updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
       renderPaymentSummary();
     });
