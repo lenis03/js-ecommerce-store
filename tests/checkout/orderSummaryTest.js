@@ -1,4 +1,4 @@
-import { loadFromStorage, cart } from "../../data/cart.js";
+import cart from "../../data/cart.js";
 import { renderOrderSummary } from "../../scripts/checkout/orderSummary.js";
 
 describe("test suit: renderOrderSummary", () => {
@@ -25,7 +25,7 @@ describe("test suit: renderOrderSummary", () => {
         },
       ]);
     });
-    loadFromStorage();
+    cart.loadFromStorage();
     renderOrderSummary();
   });
   afterEach(() => {
@@ -66,8 +66,8 @@ describe("test suit: renderOrderSummary", () => {
     expect(
       document.querySelector(`.js-cart-item-container-${productId2}`),
     ).not.toEqual(null);
-    expect(cart.length).toEqual(1);
-    expect(cart[0].productId).toEqual(productId2);
+    expect(cart.cartItems.length).toEqual(1);
+    expect(cart.cartItems[0].productId).toEqual(productId2);
     expect(
       document.querySelector(`.js-product-name-${productId2}`).innerText,
     ).toEqual("Intermediate Size Basketball");
@@ -78,9 +78,9 @@ describe("test suit: renderOrderSummary", () => {
       document.querySelector(`.js-delivery-option-input-${productId1}-3`)
         .checked,
     ).toEqual(true);
-    expect(cart.length).toEqual(2);
-    expect(cart[0].productId).toEqual(productId1);
-    expect(cart[0].deliveryOptionId).toEqual("3");
+    expect(cart.cartItems.length).toEqual(2);
+    expect(cart.cartItems[0].productId).toEqual(productId1);
+    expect(cart.cartItems[0].deliveryOptionId).toEqual("3");
     expect(
       document.querySelector(".js-payment-summary-shipping").innerText,
     ).toEqual("$14.98");
