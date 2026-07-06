@@ -1,5 +1,5 @@
 import formatCurrency from "../scripts/utils/money.js";
-class Product {
+export class Product {
   id;
   image;
   name;
@@ -23,7 +23,7 @@ class Product {
   }
 }
 
-class Clothing extends Product {
+export class Clothing extends Product {
   sizeChartLink;
   constructor(productDetails) {
     super(productDetails);
@@ -33,7 +33,7 @@ class Clothing extends Product {
     return `<a href="${this.sizeChartLink}" target="_blank">Size Chart</a>`;
   }
 }
-class Appliance extends Product {
+export class Appliance extends Product {
   instructionsLink;
   warrantyLink;
   constructor(productDetails) {
