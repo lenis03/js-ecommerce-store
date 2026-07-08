@@ -1,10 +1,10 @@
 import cart from "../../data/cart.js";
-import { loadProducts } from "../../data/products.js";
+import { loadProductsFetch } from "../../data/products.js";
 import { renderOrderSummary } from "../../scripts/checkout/orderSummary.js";
 
 describe("test suit: renderOrderSummary", () => {
   beforeAll((done) => {
-    loadProducts(() => {
+    loadProductsFetch().then(() => {
       done();
     });
   });

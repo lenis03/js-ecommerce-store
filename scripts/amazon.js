@@ -1,8 +1,11 @@
 import cart from "../data/cart.js";
-import { loadProducts, products } from "../data/products.js";
+import { loadProductsFetch, products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
-loadProducts(renderProductsGrid)
+loadProductsFetch().then(() => {
+  renderProductsGrid();
+});
+
 function renderProductsGrid() {
   let productHTML = "";
   // Stores active timeout IDs for "Added to Cart" messages
