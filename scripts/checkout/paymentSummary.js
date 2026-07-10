@@ -71,12 +71,13 @@ export function renderPaymentSummary() {
           },
           body: JSON.stringify({ cart: cart.cartItems }),
         });
-        const order = response.json();
+        const order = await response.json();
         addOrder(order);
-      } catch {
+        cart.clearCart();
+      } catch (error) {
         console.log("Unexpected error. Please try again");
+        console.log(error);
       }
-
       window.location.href = "orders.html";
     });
 }
