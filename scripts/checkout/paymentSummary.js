@@ -63,6 +63,10 @@ export function renderPaymentSummary() {
   document
     .querySelector(".js-place-order")
     .addEventListener("click", async () => {
+      if (cart.cartItems.length === 0) {
+        alert("The cart is empty please choose some products");
+        return;
+      }
       try {
         const response = await fetch("https://supersimplebackend.dev/orders", {
           method: "POST",

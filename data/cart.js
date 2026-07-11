@@ -42,20 +42,21 @@ class Cart {
   getCartQuantity() {
     let cartQuantity = 0;
     this.#cartItems.forEach((cartItem) => {
-      cartQuantity += cartItem.quantity;
+      cartQuantity += Number(cartItem.quantity);
     });
     return cartQuantity;
   }
 
   addToCart(productId, quantity) {
     const matchingItem = this.findMatchingItem(productId);
+    const numericQuantity = Number(quantity);
 
     if (matchingItem) {
-      matchingItem.quantity += quantity;
+      matchingItem.quantity = Number(matchingItem.quantity) + numericQuantity;
     } else {
       this.#cartItems.push({
         productId,
-        quantity,
+        quantity: numericQuantity,
         deliveryOptionId: "1",
       });
     }
@@ -79,7 +80,7 @@ class Cart {
     if (!matchingItem) {
       return;
     }
-    matchingItem.quantity = newQuantity;
+    matchingItem.quantity = Number(newQuantity);
     this.saveToStorage();
   }
 
