@@ -4,7 +4,7 @@
 
 This project is a front-end clone of Amazon's core shopping interface. It was built as part of a JavaScript learning journey to practice DOM manipulation, shopping cart logic, and responsive UI design. The site is deployed live on **GitHub Pages**.
 
-🔗 **Live Demo:** [lenis03.github.io/javascripts-amazon-project/](https://lenis03.github.io/javascripts-amazon-project/)
+🔗 **Live Demo:** [lenis03.github.io/javascripts-amazon-project/](https://lenis03.github.io/javascripts-amazon-project/amazon.html)
 
 ---
 
