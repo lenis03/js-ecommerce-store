@@ -31,13 +31,15 @@ async function renderTracking() {
   const deliveryTime = dayjs(productDetails.estimatedDeliveryTime);
   const percentProgress =
     ((today - orderTime) / (deliveryTime - orderTime)) * 100;
+  const deliveredMessage =
+    today < deliveryTime ? "Arriving on" : "Delivered on";
 
   const html = `
   <a class="back-to-orders-link link-primary" href="orders.html">
   View all orders
 </a>
 
-<div class="delivery-date">Arriving on ${dayjs(productDetails.estimatedDeliveryTime).format("dddd, MMMM D")}</div>
+<div class="delivery-date">${deliveredMessage} ${dayjs(productDetails.estimatedDeliveryTime).format("dddd, MMMM D")}</div>
 
 <div class="product-info">${product.name}</div>
 
