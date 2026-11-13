@@ -4,7 +4,7 @@
 
 This project is a front-end clone of Amazon's core shopping interface. It was built as part of a JavaScript learning journey to practice DOM manipulation, shopping cart logic, and responsive UI design. The site is deployed live on **GitHub Pages**.
 
-🔗 **Live Demo:** [lenis03.github.io/javascripts-amazon-project/](https://lenis03.github.io/javascripts-amazon-project/amazon.html)
+🔗 **Live Demo:** [lenis03.github.io/js-ecommerce-store/](https://lenis03.github.io/js-ecommerce-store/)
 
 ---
 
@@ -34,12 +34,12 @@ To run this project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/lenis03/javascripts-amazon-project.git
+   git clone [https://github.com/lenis03/js-ecommerce-store.git](https://github.com/lenis03/js-ecommerce-store.git)
    ```
 
 2. **Navigate to the project folder:**
    ```bash
-   cd javascripts-amazon-project
+   cd js-ecommerce-store
    ```
 
 3. **Open `index.html` in your browser** — no build tools or server required.
@@ -49,12 +49,12 @@ To run this project locally:
 ## 📁 Project Structure
 
 ```text
-javascripts-amazon-project/
+js-ecommerce-store/
 ├── index.html          # Main page
-├── styles/              # CSS files
-├── scripts/             # JavaScript logic
-├── images/               # Product images and assets
-└── README.md            # Project documentation
+├── styles/             # CSS files
+├── scripts/            # JavaScript logic
+├── images/             # Product images and assets
+└── README.md           # Project documentation
 ```
 
 ---
